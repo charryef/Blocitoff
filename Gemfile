@@ -75,6 +75,9 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+# Use jquery as the JavaScript library
+gem 'jquery-rails'
+
 #Devise is a flexible authentication solution for Rails with Warden
 gem 'devise'
 gem 'bootstrap', '~> 4.1.3'

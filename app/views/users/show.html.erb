@@ -1,6 +1,6 @@
 <div class="row">
   <div class="media-body">
-    <h2 class="media-heading"><%= @user.email %>'s To-Do List</h2>
+    <h2 class="media-heading text-center"><%= @user.name %>'s To-Do List</h2>
   </div>
   <div class="col-md-8">
     <%= render partial: 'items/item', locals: { item: @item} %>
