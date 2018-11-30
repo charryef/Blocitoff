@@ -67,11 +67,6 @@ group :test do
   gem 'chromedriver-helper'
 end
 
-group :development, :test do
-  gem 'rspec-rails', '~> 3.0'
-  gem 'rails-controller-testing'
-end
-
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
@@ -82,3 +77,4 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'bootstrap', '~> 4.1.3'
 gem 'bootstrap-sass'
+gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
