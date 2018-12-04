@@ -1,7 +1,12 @@
-<% @user.items.each do |item| %>
-  <div class="media">
-    <div class="media-body">
-      <li><%= item.name %></li>
-    </div>
-  </div>
-<% end %>
+<div class="container">
+  <% if current_user && current_user.items %>
+    <% @user.items.each do |item| %>
+      <div class="media">
+        <div class="media-body">
+          <li id="item_<%= item.id%>"><%= item.name.capitalize %>
+          <%= link_to "Completed", user_item_path(@user, item), method: :delete, data: { confirm: 'Are you sure?' }, class: 'glyphicon glyphicon-ok, remote: true' %>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>

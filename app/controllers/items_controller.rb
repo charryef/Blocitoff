@@ -21,6 +21,22 @@ class ItemsController < ApplicationController
     end
   end
 
+  def destroy
+    @item = Item.find(params[:id])
+
+    if @item.destroy
+      flash[:notice] = "\"#{@item.name}\" is finally completed."
+    else
+      flash.now[:alert] = "There was an error deleting the to-do item."
+    end
+
+    respond_to do |format|
+      format.js
+      format.html
+      format.json { head :no_content }
+    end
+  end
+
   private
   def item_params
     params.require(:item).permit(:name, :user_id)
