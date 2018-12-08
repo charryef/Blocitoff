@@ -1,18 +1,9 @@
 <div class="row">
   <div class="media-body">
-    <h2 class="media-heading text-center"><%= @user.name %>'s To-Do List</h2>
+    <h3 class="media-heading text-center"><%= @user.name %>'s To-Do List</h3>
   </div>
-  <div class="col-md-8">
-    <% @user.items.each do |item| %>
-    <%= render partial: 'items/item', locals: { item: item} %>
-    <% end %>
+  <div class="col-md-8", style="padding-top:10px">
+    <%= render partial: 'items/item', locals: { item: @item} %>
     <%= render partial: 'items/form', locals: { item: @item } %>
-  </div>
-
-  <div class="col-md-4">
-    <p>Guidelines</p>
-      <li>List your items to do</li>
-      <li>Get your stuff done in 7 days</li>
-      <li>If your items are not marked completed after 7 days, your list will be automatically decluttered</li>
   </div>
 </div>

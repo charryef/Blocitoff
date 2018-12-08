@@ -1,7 +1,4 @@
 class ItemsController < ApplicationController
-  def index
-    @items = Item.all
-  end
 
   def new
     @item = Item.new
@@ -22,10 +19,10 @@ class ItemsController < ApplicationController
   end
 
   def destroy
-    @item = Item.find(params[:id])
-
+    @item = current_user.items.find(params[:id])
     if @item.destroy
-      flash[:notice] = "\"#{@item.name}\" is finally completed."
+      flash[:notice] = "\"#{@item.name.capitalize}\" is finally completed."
+      redirect_to root_path
     else
       flash.now[:alert] = "There was an error deleting the to-do item."
     end
@@ -33,7 +30,6 @@ class ItemsController < ApplicationController
     respond_to do |format|
       format.js
       format.html
-      format.json { head :no_content }
     end
   end
 
