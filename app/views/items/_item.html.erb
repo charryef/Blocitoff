@@ -4,7 +4,11 @@
       <div class="media">
         <div class="media-body">
           <p id="item_<%= item.id%>"><%= item.name.capitalize %>
-          <%= link_to "Completed", user_item_path(@user, item), method: :delete, data: { confirm: 'Are you sure?' }, class: 'glyphicon glyphicon-ok, remote: true' %>
+            <small>
+              <%= distance_of_time_in_words(Time.now, item.created_at.to_date + 7) %> remaining before deletion
+            </small>
+            <%= link_to "Completed", user_item_path(@user, item), method: :delete, data: { confirm: 'Are you sure?' }, class: 'glyphicon glyphicon-ok, remote: true' %>
+          </p>
         </div>
       </div>
     <% end %>

@@ -29,7 +29,7 @@ class ItemsController < ApplicationController
 
     respond_to do |format|
       format.js
-      format.html
+      format.html 
     end
   end
 
