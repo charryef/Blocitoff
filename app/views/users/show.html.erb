@@ -1,8 +1,8 @@
-<div class="row">
+<div class="jumbotron text-center">
   <div class="media-body">
     <h3 class="media-heading text-center"><%= @user.name %>'s To-Do List</h3>
   </div>
-  <div class="col-md-8", style="padding-top:10px">
+  <div>
     <%= render partial: 'items/item', locals: { item: @item} %>
     <%= render partial: 'items/form', locals: { item: @item } %>
   </div>
