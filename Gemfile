@@ -76,5 +76,4 @@ gem 'jquery-rails'
 #Devise is a flexible authentication solution for Rails with Warden
 gem 'devise'
 gem 'bootstrap', '~> 4.1.3'
-gem 'bootstrap-sass'
 gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
