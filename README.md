@@ -1,5 +1,9 @@
 # Blocitoff
-Blocitoff is an application that allows users to keep to-do lists manageable by creating self-destructing to-do lists. If the to-do item is not important enough to be completed in seven days, it does not belong in their to-do list.
+**Blocitoff** is the first backend specialization that I chose for my Full Stack Web Development course at [Bloc](https://www.bloc.io/). It is an application, built on Ruby on Rails, that allows users to keep their to-do lists manageable by creating self-destructing ones. If the to-do item is not important enough to be completed in seven days, it gets automatically deleted.
+
+This app is deployed on Heroku:
+The source code is here on Github: https://github.com/charryef/blocitoff
+
 
 ## Blocitoff Features
 - Users are able to **sign up** for a free account by providing a user name, password and email.
