@@ -2,6 +2,7 @@
 **Blocitoff** is the first backend specialization that I chose for my Full Stack Web Development course at [Bloc](https://www.bloc.io/). It is an application, built with Ruby on Rails, that allows users to keep their to-do lists manageable by creating self-destructing ones. If the to-do item is not important enough to be completed in seven days, it gets automatically deleted.
 
 This app is deployed on Heroku: https://cfuller-blocitoff.herokuapp.com/
+
 The source code is here on Github: https://github.com/charryef/blocitoff
 
 ## Blocitoff Features
