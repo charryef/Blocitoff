@@ -8,10 +8,11 @@ class ItemsController < ApplicationController
   def create
     @item = Item.new(item_params)
     @item.user = current_user
+    @user = current_user
 
     if @item.save
       flash[:success] = "Item was saved."
-      redirect_to user_session_path
+      redirect_to current_user
     else
       flash.now[:alert] = "There was an error saving the item. Please try again."
       render :new
@@ -29,7 +30,7 @@ class ItemsController < ApplicationController
 
     respond_to do |format|
       format.js
-      format.html 
+      format.html
     end
   end
 

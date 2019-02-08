@@ -2,21 +2,27 @@
   <h1>Blocitoff</h1>
   <p>A self-destructing to-do list to keep you focused on the things that really matter.</p>
   <p>
-    <%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-primary' %> or
-    <%= link_to "Sign In", user_session_path, class: 'btn btn-primary' %> today!
+    <% if user_signed_in? %>
+      <%= link_to "#{current_user.name}'s To-Do List", current_user, class: 'btn btn-link' %>
+      <%= link_to "Edit Profile", edit_user_registration_path, class: 'btn btn-link' %>
+      <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'btn btn-primary' %>
+    <% else %>
+      <%= link_to "Sign In", user_session_path, class: 'btn btn-link' %> or
+      <%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-primary' %> today!
+    <% end %>
   </p>
 </div>
 <div class="row">
   <div class="col-md-4">
-   <h2>Solves world hunger</h2>
-   <p>Bloccit will deliver food and water to those in need, all over the world.</p>
+   <h2>Get Organized!</h2>
+     <p>Add items to your to-do list.<i class="fa fa-camera-retro"></i></p>
   </div>
   <div class="col-md-4">
-   <h2>Eliminates poverty</h2>
-   <p>Bloccit will deliver money and education to those in need, all over the world.</p>
+   <h2>Be Productive!</h2>
+   <p>Finish your task in 7 days. Mark as completed and your item gets taken off your list.</p>
   </div>
   <div class="col-md-4">
-   <h2>Makes you better looking</h2>
-   <p>Bloccit will make you better looking: it's scientifically proven to make men look like Ryan Gosling and women look like Shakira.</p>
+   <h2>Declutter</h2>
+   <p>No time? No problem, <strong>Blocitoff</strong> offers decluttering. Your item will disappear after a week.</p>
   </div>
 </div>
